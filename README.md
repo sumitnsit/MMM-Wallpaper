@@ -18,6 +18,9 @@ cd ~/MagicMirror/modules
 git clone https://github.com/sumitnsit/MMM-Wallpaper.git
 ```
 
+### Copy Wallpaper
+Copy your family images or wallpapers in `images` folder.
+
 ### Update
 
 ```bash

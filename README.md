@@ -1,10 +1,8 @@
 # MMM-Wallpaper
 
-If you are using MagicMirror as a frame then you may use this light weight module to show a slideshow of wallpapers.
-
 ![Example of MMM-Wallpaper](./example.jpg)
 
-[Module description]
+If you are using MagicMirror as a frame then you may use this light weight module to show a slideshow of wallpapers.
 
 ## Installation
 

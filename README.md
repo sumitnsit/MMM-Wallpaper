@@ -76,11 +76,3 @@ Assign gestures to shortcuts created ealiear.
 - Clench > Resume
 
 ![Example of watch](./watch.jpeg)
-
-## Developer commands
-
-- `npm install` - Install devDependencies like ESLint.
-- `npm run lint` - Run linting and formatter checks.
-- `npm run lint:fix` - Fix linting and formatter issues.
-
-[mm]: https://github.com/MagicMirrorOrg/MagicMirror

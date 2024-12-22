@@ -1,0 +1,21 @@
+.MMM-Wallpaper .bgimage {
+    color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    top: 0;
+}
+
+.MMM-Wallpaper .bgGradient{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    -webkit-opacity: 0.2;
+}

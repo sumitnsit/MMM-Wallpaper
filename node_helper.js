@@ -45,6 +45,13 @@ module.exports = NodeHelper.create({
       this.config.autoResumeTime=30
 			res.status(200).send({status: 200})
 		})
+
+    this.expressApp.get("/reloadImages", (req, res) => {
+			Log.info("Reload images!", req.query)
+      this.config.photos  = FileSystem.readdirSync("modules/MMM-Wallpaper/images");
+      this.config.index = 0;
+      res.status(200).send({status: 200})
+		})
   },
   
   async socketNotificationReceived(notification, payload) {
@@ -94,11 +101,15 @@ module.exports = NodeHelper.create({
   startSlideShow: function(){
     if(!this.config.stopSlideShow){
       const index = this.getNextIndex()
+      if(index == 0){
+        // reload photos before starting from 0 index
+        this.config.photos  = FileSystem.readdirSync("modules/MMM-Wallpaper/images");
+      }
       const fileName = this.config.photos[index]
       this.sendSocketNotification("NEW_IMAGE", { "filename": fileName, "transition": "background-image 2s ease-out"})
     }
     setTimeout(() => {
       this.startSlideShow()
-    }, 10000)
+    }, 15000)
   }
 })

@@ -27,8 +27,6 @@ Module.register("MMM-Wallpaper", {
    * @param {any} payload - The payload data`returned by the node helper.
    */
   socketNotificationReceived: function(notification, payload) {
-    console.log("SocketNotification received: ",notification, payload)
-
     if (notification === "NEW_IMAGE") {
       this.imageName = `${payload.filename}`
       document.getElementById("mybg").style.transition = payload.transition
